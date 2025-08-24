@@ -2,6 +2,7 @@
 object galván{
     var sueldo = 15000
     var dinero = 0
+    var deuda = 0
     method cobrar(){
         dinero = dinero + sueldo
     }
@@ -10,6 +11,9 @@ object galván{
     }
     method sueldo(){
         return sueldo
+    }
+    method gastar(cantidad){
+        
     }
 }
 
