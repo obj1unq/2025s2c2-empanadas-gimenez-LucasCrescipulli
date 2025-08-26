@@ -1,15 +1,12 @@
 //Escribir aqui los objetos
 object galván{
     var sueldo = 15000
-    var dinero = 0
-    var deuda = 0
+    var saldo = 0
     method cobrar(){
-        if (sueldo >= deuda){
-					dinero = sueldo - deuda
-					deuda = 0
-				} else {
-					deuda = deuda - sueldo
-				}
+        saldo = saldo + sueldo
+    }
+    method gastar(cantidad){
+        saldo = saldo - cantidad
     }
     method actualizarSueldo(_sueldo){
         sueldo = _sueldo
@@ -17,13 +14,19 @@ object galván{
     method sueldo(){
         return sueldo
     }
-    method gastar(cantidad){
-        if (dinero >= cantidad){
-					dinero = dinero - cantidad
-				} else {
-					deuda = cantidad - dinero
-					dinero = 0
-				}
+    method deuda(){
+        if (saldo >= 0){
+            return 0
+        } else {
+            return saldo * -1
+        }
+    }
+    method dinero(){
+        if (saldo >= 0){
+            return saldo
+        } else { 
+            return 0
+        }
     }
 }
 
