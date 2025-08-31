@@ -1,5 +1,5 @@
 //Escribir aqui los objetos
-object galván{
+object galvan{
     var sueldo = 15000
     var saldo = 0
     method cobrar(){
@@ -13,6 +13,9 @@ object galván{
     }
     method sueldo(){
         return sueldo
+    }
+    method sueldo(_sueldo){
+        sueldo = _sueldo
     }
     method deuda(){
         if (saldo >= 0){
@@ -38,7 +41,7 @@ object baigorria{
         dinero = dinero + sueldo
         sueldo = 0
     }
-    method venta(cantidad){
+    method vender(cantidad){
         sueldo = sueldo + cantidad * cobroPorUnidad
     }
     method sueldo(){
@@ -52,9 +55,9 @@ object baigorria{
     }
 }
 
-object giménez{
+object gimenez{
     var fondo = 300000
-    method pagar(empleado){
+    method pagarSueldo(empleado){
         fondo = fondo - empleado.sueldo()
         empleado.cobrar()
     }
